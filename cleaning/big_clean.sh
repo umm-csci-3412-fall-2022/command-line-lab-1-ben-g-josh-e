@@ -1,3 +1,8 @@
 #!/bin/bash
 
-tempdir="$1"
+homedir=pwd
+dirname="$1"
+tempdir=$(mktemp -d)
+
+tar --directory=$tempdir -xzf $dirname
+
